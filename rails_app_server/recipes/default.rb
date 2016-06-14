@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: cs_spree_app_servers
+# Cookbook Name:: rails_app_server
 # Recipe:: default
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.

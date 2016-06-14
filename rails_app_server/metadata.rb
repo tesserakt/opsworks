@@ -1,9 +1,9 @@
-name 'cs_spree_app_servers'
+name 'rails_app_server'
 maintainer 'Tyler Smart'
 maintainer_email 'tyler@candlescience.com'
 license 'no_rights'
-description 'Installs/Configures cs_spree_app_servers'
-long_description 'Installs/Configures cs_spree_app_servers'
+description 'Installs/Configures rails_app_servers'
+long_description 'Installs/Configures rails_app_servers'
 version '0.1.0'
 
 depends 'application_ruby'
