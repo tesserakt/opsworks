@@ -5,6 +5,7 @@
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
 include_recipe 'build-essential'
+include_recipe 'postgresql::client'
 app = search(:aws_opsworks_app).first
 rds_db_instance = search(:aws_opsworks_rds_db_instance).first
 app_path = "/srv/#{app['shortname']}"
@@ -14,6 +15,15 @@ app_path = "/srv/#{app['shortname']}"
 # Chef::Log.info(rds_db_instance)
 # Chef::Log.info("app")
 # Chef::Log.info(app)
+
+file '/root/.ssh/github.key' do
+  content app["app_source"]["ssh_key"]
+    mode '0600'
+end
+
+template '/root/.ssh/config' do
+  source 'config.erb'
+end
 
 package 'git'
 
